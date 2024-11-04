@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai-detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Resim Yükleme</h1>
+    <div class="wrapper">
+        <div class="upload-container">
+            <h3>Resim Yükleme Alanı</h3>
+            <div class="buttons">
+                <input type="file" id="imageInput" accept="image/*" style="display: none;">
+                <button class="file-input-button" onclick="document.getElementById('imageInput').click();">Dosya Seçiniz</button>
+                <button id="uploadbutton">Resmi Analiz Et</button>
+            </div>
+            <img src="upload.jpg" id="imagePreview">
+        </div>
+        <div class="colors-container">
+            <p class="error">Şuanda hiçbirşey görüntülenmiyor...</p>
+        </div>
+       
+    </div>
+
+    
+        <div class="tags-container">
+            <h3>Resim Verileri</h3>
+            <p class="error">Şuanda hiçbirşey görüntülenmiyor...</p>
+            <div class="results"></div>
+            <div class="buttons">
+                <button id="seeMore" style="display: none;">Daha fazlasını gör</button>
+                <button id="exportTags" style="display: none;">Etiketleri dışarı aktar</button>
+            </div>
+        </div>
+    </div>
+        <div id="uploadModal" class="modal">
+            <div class="modal-content">
+                <h3>Resim Yükleniyor...</h3>
+                <div id="uploadProgress" class="progress"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
